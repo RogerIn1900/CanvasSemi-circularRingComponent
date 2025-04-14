@@ -1,4 +1,4 @@
-## MyGraph Compose Library
+## CanvasSemi-circularRingComponent
 
 一个用于健康数据展示的动画半圆环图表组件，支持自定义样式和交互。
 
