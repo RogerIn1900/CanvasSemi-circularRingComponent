@@ -176,6 +176,7 @@ fun SemiCircularRing(
 
                 // 如果 sweepAngle 大于 180f，绘制上层部分
                 if (sweepAngle > 180f) {
+                    val drawAngle = sweepAngle % 180
                     val lightPaint = Paint().apply {
                         color = lightenColor(paint.color)// 使用原始颜色的浅色,传入的参数不能直接使用color，会变黑
                         strokeWidth = ringWidth
@@ -195,7 +196,7 @@ fun SemiCircularRing(
                                 radius,  // 右边界
                                 radius,  // 下边界
                                 180f,   // 起始角度
-                                sweepAngle - 180f, // 扫过的角度（超过 180f 的部分）
+                                drawAngle, // 扫过的角度（超过 180f 的部分）
                                 false,  // 不使用中心点连接
                                 lightPaint.asFrameworkPaint() // 使用浅色 Paint
                             )
